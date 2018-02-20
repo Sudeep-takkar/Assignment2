@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashboard</title>
+	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<link href="../css.styles.css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	<script src="../js/custom.js"></script>
+</head>
+<body>
+	<div class="container">
+	<div class="row">
+	<h1>DashBoard</h1>
+	<button class="btn btn-large pull-right" onclick="window.location.href = './addTransaction.html'">+</button>
+	<button class="btn btn-large btn-danger pull-right" onclick="logout()">Logout</button>
+	</div>
+	<div class="row">
+	<input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search">
+	<table class="table" id="transactionTable">
+	  	<thead>
+	    	<tr>
+		      	<th onclick="sortTable(0)">Date</th>
+		      	<th onclick="sortTable(1)">Transaction Type</th>
+		      	<th onclick="sortTable(2)">Location</th>
+		      	<th onclick="sortTable(3)">Value</th>
+	    	</tr>
+	  	</thead>
+	  	<tbody>
+		    <tr data-toggle="modal" data-target=".bs-example-modal-lg">
+		      <td scope="row">10-02-2018</th>
+		      <td>Grocery</td>
+		      <td>FreshCo</td>
+		      <td>123</td>
+		    </tr>
+		    <tr data-toggle="modal" data-target=".bs-example-modal-lg">
+		      <td scope="row">09-02-2018</th>
+		      <td>Fuel</td>
+		      <td>Gas Station</td>
+		      <td>99</td>
+		    </tr>
+		    <tr data-toggle="modal" data-target=".bs-example-modal-lg">
+		      <td scope="row">17-02-2018</th>
+		      <td>Rent</td>
+		      <td>15 Green valley drive</td>
+		      <td>500</td>
+		    </tr>
+		    <tr data-toggle="modal" data-target=".bs-example-modal-lg">
+		      <td scope="row">19-02-2018</th>
+		      <td>Shopping</td>
+		      <td>Sears</td>
+		      <td>69</td>
+		    </tr>
+	  	</tbody>
+	</table>
+	</div>
+	</div>
+</body>
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+    	<table class="table">
+	  	<thead>
+	    	<tr>
+		      	<th>Date</th>
+		      	<th>Transaction Type</th>
+		      	<th>Location</th>
+		      	<th>Value</th>
+	    	</tr>
+	  	</thead>
+	  	<tbody>
+		    <tr>
+		      <td scope="row">19-02-2018</th>
+		      <td>Grocery</td>
+		      <td>FreshCo (Weber St.)</td>
+		      <td>123</td>
+		    </tr>
+		    <tr>
+		      <td scope="row">19-02-2018</th>
+		      <td>Fuel</td>
+		      <td>Gas Station (Green Valley Drive)</td>
+		      <td>99</td>
+		    </tr>
+		    <tr>
+		      <td scope="row">19-02-2018</th>
+		      <td>Rent</td>
+		      <td>15 Green Valley Drive</td>
+		      <td>500</td>
+		    </tr>
+	  	</tbody>
+	</table>
+    </div>
+  </div>
+</div>
+</html>
