@@ -78,7 +78,7 @@ function sortTable(n) {
 }
 
 function logout(){
-	window.location.href = '../views/index.html';
+	window.location.href = '../index.html';
 	localStorage.removeItem("email");
 	localStorage.removeItem("password");
 }
