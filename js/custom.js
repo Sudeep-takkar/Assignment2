@@ -4,7 +4,7 @@ $(document).ready(function () {
     var email = $("#email").val();
     var password = $("#password").val();
     console.log(email, password);
-    if((email.toLowerCase() == 'sudeep.takkar93@gmail.com' && password == 'Sudeep@123') || (email.toLowerCase() == 'shubham@gmail.com' && password == 'Shubham')){
+    if((email.toLowerCase() == 'sudeep.takkar93@gmail.com' && password == 'Sudeep@123') || (email.toLowerCase() == 'shubhamarya9@gmail.com' && password == 'Shubham9')){
     	window.location.href = '../views/dashboard.html';
     	localStorage.setItem('email', email.toLowerCase());
     	localStorage.setItem('password', password);
